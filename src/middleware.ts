@@ -20,6 +20,8 @@ export function middleware(request: NextRequest) {
   if (!request.cookies.has("vercel")) {
     console.log("setting cookie");
     response.cookies.set("vercel", "fast");
+    // additional line to test deletion
+    response.cookies.delete("nextjs");
     response.cookies.set({
       name: "vercel",
       value: "fast",
